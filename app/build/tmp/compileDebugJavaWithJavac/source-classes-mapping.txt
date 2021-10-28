@@ -1,0 +1,16 @@
+com/main/nagapp/databinding/ActivityMainBinding.java
+ com.main.nagapp.databinding.ActivityMainBinding
+com/main/nagapp/databinding/FragmentFirstBinding.java
+ com.main.nagapp.databinding.FragmentFirstBinding
+com/main/nagapp/DataBaseHelper.java
+ com.main.nagapp.DataBaseHelper
+com/main/nagapp/databinding/ContentMainBinding.java
+ com.main.nagapp.databinding.ContentMainBinding
+com/main/nagapp/databinding/FragmentSecondBinding.java
+ com.main.nagapp.databinding.FragmentSecondBinding
+com/main/nagapp/ToDoModel.java
+ com.main.nagapp.ToDoModel
+com/main/nagapp/TimePickerFragment.java
+ com.main.nagapp.TimePickerFragment
+com/main/nagapp/BuildConfig.java
+ com.main.nagapp.BuildConfig

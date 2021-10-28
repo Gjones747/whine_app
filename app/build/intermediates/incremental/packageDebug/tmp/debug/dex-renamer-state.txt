@@ -1,0 +1,4 @@
+#Wed Oct 27 22:00:31 PDT 2021
+base.0=C\:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
