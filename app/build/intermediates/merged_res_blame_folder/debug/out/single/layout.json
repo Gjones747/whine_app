@@ -12,6 +12,10 @@
         "source": "C:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
+        "merged": "C:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\list_items.xml",
+        "source": "C:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\src\\main\\res\\layout\\list_items.xml"
+    },
+    {
         "merged": "C:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first.xml",
         "source": "C:\\Users\\3 em\\Desktop\\Brian's Folder\\Coding\\nagapp\\nag-app-master\\app\\src\\main\\res\\layout\\fragment_first.xml"
     }

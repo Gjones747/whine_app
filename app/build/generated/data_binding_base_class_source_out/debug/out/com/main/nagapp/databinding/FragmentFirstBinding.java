@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -29,19 +29,19 @@ public final class FragmentFirstBinding implements ViewBinding {
   public final ImageView imageView3;
 
   @NonNull
-  public final TextView textviewFirst;
+  public final RecyclerView rView;
 
   @NonNull
-  public final ScrollView toDoItems;
+  public final TextView textviewFirst;
 
   private FragmentFirstBinding(@NonNull ConstraintLayout rootView,
       @NonNull FloatingActionButton fab2, @NonNull ImageView imageView3,
-      @NonNull TextView textviewFirst, @NonNull ScrollView toDoItems) {
+      @NonNull RecyclerView rView, @NonNull TextView textviewFirst) {
     this.rootView = rootView;
     this.fab2 = fab2;
     this.imageView3 = imageView3;
+    this.rView = rView;
     this.textviewFirst = textviewFirst;
-    this.toDoItems = toDoItems;
   }
 
   @Override
@@ -83,20 +83,20 @@ public final class FragmentFirstBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rView;
+      RecyclerView rView = ViewBindings.findChildViewById(rootView, id);
+      if (rView == null) {
+        break missingId;
+      }
+
       id = R.id.textview_first;
       TextView textviewFirst = ViewBindings.findChildViewById(rootView, id);
       if (textviewFirst == null) {
         break missingId;
       }
 
-      id = R.id.toDoItems;
-      ScrollView toDoItems = ViewBindings.findChildViewById(rootView, id);
-      if (toDoItems == null) {
-        break missingId;
-      }
-
-      return new FragmentFirstBinding((ConstraintLayout) rootView, fab2, imageView3, textviewFirst,
-          toDoItems);
+      return new FragmentFirstBinding((ConstraintLayout) rootView, fab2, imageView3, rView,
+          textviewFirst);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -36,35 +36,41 @@ class SecondFragment : Fragment() {
         var question = ""
         var yesMessage = ""
         var noMessage = ""
+
         var time = ""
+        var minute = 0
+        var hour = 0
+
         // time button
         binding.setTimeButton.setOnClickListener{
             var timePicker: DialogFragment = TimePickerFragment()
             timePicker.show(childFragmentManager, "time picker")
-            parentFragmentManager.setFragmentResultListener("requestKey",
-                viewLifecycleOwner
-            ) { _, bundle ->
-                // We use a String here, but any type that can be put in a Bundle is supported
-                val hour = bundle.getString("h")
-                val minute = bundle.getString("m")
-                // Do something with the result
-                time = "$hour:$minute"
-            }
+            hour = TimePickerFragment.getHour()
+            minute = TimePickerFragment.getMinute()
         }
+
+        // time formatting
+        var minuteString = ""
+        var hourString = ""
+        if (minute < 10){
+            minuteString = "0$minute"
+        }
+        time = "$hour:$minuteString"
+
         // when the add button is clicked, get information into strings to then add into database, switch screens
         binding.addButton.setOnClickListener {
-            question = binding.addTitle.getText().toString()
-            yesMessage = binding.yesMessage.getText().toString()
-            noMessage = binding.noMessage.getText().toString()
+            question = binding.addTitle.text.toString()
+            yesMessage = binding.yesMessage.text.toString()
+            noMessage = binding.noMessage.text.toString()
             if (question == "" || yesMessage == "" || noMessage == "" || time == ""){
-                // play an animation that says user must fill out all boxes
+                Toast.makeText(this.context, "All information must be filled out!", Toast.LENGTH_SHORT).show()
             } else {
                 // add to database
                 val toDoModel = ToDoModel(question, yesMessage, noMessage, time)
                 val dataBaseHelper = DataBaseHelper(this.context)
                 val success = dataBaseHelper.addOne(toDoModel)
                 if (success) {
-                    Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this.context, "New entry created!", Toast.LENGTH_SHORT).show()
                 }
                 findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
 
