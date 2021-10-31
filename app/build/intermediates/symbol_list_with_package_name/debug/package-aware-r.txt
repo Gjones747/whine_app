@@ -1061,6 +1061,7 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color elephant_launcher_background
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -1679,6 +1680,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable elephant_launcher_foreground
 drawable ic_clock_black_24dp
 drawable ic_elephant
 drawable ic_keyboard_black_24dp
@@ -1818,6 +1820,9 @@ id blocking
 id bottom
 id bounce
 id buttonPanel
+id c_no
+id c_remove
+id c_yes
 id cache_measures
 id cancel_button
 id center
@@ -1922,6 +1927,7 @@ id ignoreRequest
 id image
 id imageView
 id imageView3
+id imageView4
 id info
 id invisible
 id inward
@@ -2002,6 +2008,7 @@ id navigation_header_container
 id never
 id noMessage
 id noScroll
+id no_response_c
 id none
 id normal
 id notification_background
@@ -2027,8 +2034,10 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id question_c
 id quit
 id quit_button
+id rView
 id radio
 id ratio
 id rectangles
@@ -2127,10 +2136,10 @@ id textinput_prefix_text
 id textinput_suffix_text
 id textview_first
 id time
+id time_response_c
 id title
 id titleDividerNoCustom
 id title_template
-id toDoItems
 id toggle
 id toolbar
 id top
@@ -2160,6 +2169,7 @@ id withinBounds
 id wrap
 id wrap_content
 id yesMessage
+id yes_response_c
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -2242,6 +2252,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_first
 layout fragment_second
+layout list_items
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2309,6 +2320,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu menu_main
+mipmap elephant_launcher
+mipmap elephant_launcher_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
